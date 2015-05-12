@@ -90,41 +90,8 @@ public class InventoryClick implements Listener {
 
 				ItemStack clicked = e.getCurrentItem();
 
-				if (clicked == null) {
-					return;
-				}
-
-				if (clicked.getType() == Material.LEATHER_HELMET) {
-					p.getInventory().setHelmet(new ItemStack(Material.LEATHER_HELMET));
-					p.closeInventory();
-					return;
-				}
-
-				if (clicked.getType() == Material.GOLD_HELMET) {
-					p.getInventory().setHelmet(new ItemStack(Material.GOLD_HELMET));
-					p.closeInventory();
-					return;
-				}
-
-				if (clicked.getType() == Material.IRON_HELMET) {
-					p.getInventory().setHelmet(new ItemStack(Material.IRON_HELMET));
-					p.closeInventory();
-					return;
-				}
-
-				if (clicked.getType() == Material.DIAMOND_HELMET) {
-					p.getInventory().setHelmet(new ItemStack(Material.DIAMOND_HELMET));
-					p.closeInventory();
-					return;
-				}
-
-				if (clicked.getType() == Material.CHAINMAIL_HELMET) {
-					p.getInventory().setHelmet(new ItemStack(Material.CHAINMAIL_HELMET));
-					p.closeInventory();
-					return;
-				}
-
-				else return;
+				p.getInventory().setHelmet(new ItemStack(clicked.getType()));
+				p.closeInventory();
 			}
 
 			if (e.getInventory().getName().equals(Main.chestplateInventory().getName())) {
@@ -136,37 +103,8 @@ public class InventoryClick implements Listener {
 					return;
 				}
 
-				if (clicked.getType() == Material.LEATHER_CHESTPLATE) {
-					p.getInventory().setChestplate(new ItemStack(Material.LEATHER_CHESTPLATE));
-					p.closeInventory();
-					return;
-				}
-
-				if (clicked.getType() == Material.GOLD_CHESTPLATE) {
-					p.getInventory().setChestplate(new ItemStack(Material.GOLD_CHESTPLATE));
-					p.closeInventory();
-					return;
-				}
-
-				if (clicked.getType() == Material.IRON_CHESTPLATE) {
-					p.getInventory().setChestplate(new ItemStack(Material.IRON_CHESTPLATE));
-					p.closeInventory();
-					return;
-				}
-
-				if (clicked.getType() == Material.DIAMOND_CHESTPLATE) {
-					p.getInventory().setChestplate(new ItemStack(Material.DIAMOND_CHESTPLATE));
-					p.closeInventory();
-					return;
-				}
-
-				if (clicked.getType() == Material.CHAINMAIL_HELMET) {
-					p.getInventory().setChestplate(new ItemStack(Material.CHAINMAIL_CHESTPLATE));
-					p.closeInventory();
-					return;
-				}
-
-				else return;
+				p.getInventory().setChestplate(new ItemStack(clicked.getType()));
+				p.closeInventory();
 			}
 
 			if (e.getInventory().getName().equals(Main.leggingsInventory().getName())) {
@@ -178,37 +116,8 @@ public class InventoryClick implements Listener {
 					return;
 				}
 
-				if (clicked.getType() == Material.LEATHER_LEGGINGS) {
-					p.getInventory().setLeggings(new ItemStack(Material.LEATHER_LEGGINGS));
-					p.closeInventory();
-					return;
-				}
-
-				if (clicked.getType() == Material.GOLD_LEGGINGS) {
-					p.getInventory().setLeggings(new ItemStack(Material.GOLD_LEGGINGS));
-					p.closeInventory();
-					return;
-				}
-
-				if (clicked.getType() == Material.IRON_LEGGINGS) {
-					p.getInventory().setLeggings(new ItemStack(Material.IRON_LEGGINGS));
-					p.closeInventory();
-					return;
-				}
-
-				if (clicked.getType() == Material.DIAMOND_LEGGINGS) {
-					p.getInventory().setLeggings(new ItemStack(Material.DIAMOND_LEGGINGS));
-					p.closeInventory();
-					return;
-				}
-
-				if (clicked.getType() == Material.CHAINMAIL_LEGGINGS) {
-					p.getInventory().setLeggings(new ItemStack(Material.CHAINMAIL_LEGGINGS));
-					p.closeInventory();
-					return;
-				}
-
-				else return;
+				p.getInventory().setLeggings(new ItemStack(clicked.getType()));
+				p.closeInventory();
 			}
 
 			if (e.getInventory().getName().equals(Main.bootsInventory().getName())) {
@@ -216,41 +125,10 @@ public class InventoryClick implements Listener {
 
 				ItemStack clicked = e.getCurrentItem();
 
-				if (clicked == null) {
-					return;
-				}
+				if (clicked == null) return;
 
-				if (clicked.getType() == Material.LEATHER_BOOTS) {
-					p.getInventory().setBoots(new ItemStack(Material.LEATHER_BOOTS));
-					p.closeInventory();
-					return;
-				}
-
-				if (clicked.getType() == Material.GOLD_BOOTS) {
-					p.getInventory().setBoots(new ItemStack(Material.GOLD_BOOTS));
-					p.closeInventory();
-					return;
-				}
-
-				if (clicked.getType() == Material.IRON_BOOTS) {
-					p.getInventory().setBoots(new ItemStack(Material.IRON_BOOTS));
-					p.closeInventory();
-					return;
-				}
-
-				if (clicked.getType() == Material.DIAMOND_BOOTS) {
-					p.getInventory().setBoots(new ItemStack(Material.DIAMOND_BOOTS));
-					p.closeInventory();
-					return;
-				}
-
-				if (clicked.getType() == Material.CHAINMAIL_BOOTS) {
-					p.getInventory().setBoots(new ItemStack(Material.CHAINMAIL_BOOTS));
-					p.closeInventory();
-					return;
-				}
-
-				else return;
+				p.getInventory().setBoots(new ItemStack(clicked.getType()));
+				p.closeInventory();
 			}
 
 			if (e.getInventory().getName().equals(Main.hatsInventory().getName())) {
@@ -264,10 +142,6 @@ public class InventoryClick implements Listener {
 					p.openInventory(Main.hatsPageTwo());
 					return;
 				}
-
-				p.getInventory().setHelmet(new ItemStack(clicked.getType()));
-				p.updateInventory();
-				p.closeInventory();
 
 			}
 
@@ -300,10 +174,13 @@ public class InventoryClick implements Listener {
 					return;
 				}
 
-				if (clicked.getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "Page One")) {
+				if (clicked.getType().equals(Material.ARROW)) {
 					p.openInventory(Main.hatsInventory());
 					return;
 				}
+
+				p.getInventory().setHelmet(new ItemStack(clicked.getType()));
+				p.updateInventory();
 			}
 
 			if (e.getSlotType() == SlotType.ARMOR) {

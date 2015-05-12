@@ -332,7 +332,7 @@ public class Main extends JavaPlugin {
 	}
 
 	public static Inventory hatsInventory() {
-		Inventory inv = Bukkit.getServer().createInventory(null, 9 * 6, "Hat Selector");
+		Inventory inv = Bukkit.getServer().createInventory(null, 9 * 6, "Hat Selector (1/2)");
 
 		{
 			ItemStack is = new ItemStack(Material.GRASS);
@@ -671,7 +671,7 @@ public class Main extends JavaPlugin {
 	}
 	
 	public static Inventory hatsPageTwo() {
-		Inventory inv = Bukkit.getServer().createInventory(null, 9 * 6, "Hat Selector");
+		Inventory inv = Bukkit.getServer().createInventory(null, 9 * 6, "Hat Selector (2/2)");
 		
 		
 		{
