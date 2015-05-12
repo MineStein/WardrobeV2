@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Wardrobe:jar">
+    <output-path>$USER_HOME$/Desktop/Developer/Java/Minecraft/Servers/NovaUniverse Servers/Hub/plugins</output-path>
+    <root id="archive" name="Wardrobe.jar">
+      <element id="module-output" name="Wardrobe" />
+    </root>
+  </artifact>
+</component>
