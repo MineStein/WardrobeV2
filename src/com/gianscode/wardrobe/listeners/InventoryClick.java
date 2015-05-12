@@ -260,6 +260,11 @@ public class InventoryClick implements Listener {
 
 				if (clicked == null) return;
 
+				if (clicked.getType().equals(Material.ARROW)) {
+					p.openInventory(Main.hatsPageTwo());
+					return;
+				}
+
 				p.getInventory().setHelmet(new ItemStack(clicked.getType()));
 				p.updateInventory();
 				p.closeInventory();
